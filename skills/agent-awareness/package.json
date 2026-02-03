@@ -1,0 +1,27 @@
+{
+  "name": "agent-awareness",
+  "version": "1.0.0",
+  "description": "Self-awareness and state tracking for AI agents with Kanban dashboard",
+  "main": "scripts/agentAwareness.js",
+  "bin": {
+    "agent-awareness": "./scripts/quick-cli.js",
+    "aa": "./scripts/quick-cli.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "cli": "node scripts/quick-cli.js",
+    "dashboard": "node scripts/htmlDashboard.js",
+    "deploy": "node deploy.js",
+    "deploy:network": "node deploy.js --network",
+    "deploy:ngrok": "node deploy.js --ngrok",
+    "deploy:cloud": "node deploy.js --cloud"
+  },
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1"
+  }
+}

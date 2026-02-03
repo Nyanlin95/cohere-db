@@ -1,0 +1,583 @@
+{
+  "version": "1.0.0",
+  "columns": {
+    "sleeping": {
+      "emoji": "🌙",
+      "title": "Sleeping",
+      "description": "Backlog and low priority items"
+    },
+    "active": {
+      "emoji": "🚀",
+      "title": "Active",
+      "description": "Current focus and work"
+    },
+    "next": {
+      "emoji": "📋",
+      "title": "Next",
+      "description": "Upcoming tasks"
+    },
+    "ideas": {
+      "emoji": "💡",
+      "title": "Ideas",
+      "description": "Brainstorming and experiments"
+    },
+    "done": {
+      "emoji": "✅",
+      "title": "Done",
+      "description": "Completed items"
+    }
+  },
+  "cards": [
+    {
+      "id": "12cc5f8b-ce2d-4657-9e86-55fd4c1915d9",
+      "columnId": "done",
+      "content": "Test WhatsApp Monitor notification system",
+      "description": "",
+      "tags": [
+        "whatsapp",
+        "testing"
+      ],
+      "priority": "medium",
+      "dueDate": null,
+      "createdAt": "2026-02-02T19:16:38.677Z",
+      "updatedAt": "2026-02-02T23:27:43.573Z",
+      "completedAt": "2026-02-02T23:27:43.573Z",
+      "metadata": {}
+    },
+    {
+      "id": "4f3e9b6e-696f-454a-ba23-1d07ecdfc4ba",
+      "columnId": "done",
+      "content": "Integrate OpenCode for automated tasks",
+      "description": "",
+      "tags": [
+        "opencode",
+        "automation"
+      ],
+      "priority": "low",
+      "dueDate": null,
+      "createdAt": "2026-02-02T19:16:45.860Z",
+      "updatedAt": "2026-02-02T22:34:18.111Z",
+      "completedAt": "2026-02-02T22:34:18.111Z",
+      "metadata": {}
+    },
+    {
+      "id": "c4d0dc3c-40c4-4b21-809a-a3e18c50051f",
+      "columnId": "done",
+      "content": "Create unit tests for WhatsApp analyzer",
+      "description": "",
+      "tags": [
+        "whatsapp",
+        "testing"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-02T19:29:37.887Z",
+      "updatedAt": "2026-02-02T23:29:08.631Z",
+      "completedAt": "2026-02-02T23:29:08.631Z"
+    },
+    {
+      "id": "470a7927-8746-4b6d-ba5b-fe28b4ab1069",
+      "columnId": "done",
+      "content": "Create OpenCode subagent config for Clawdbot automation --priority high --tags opencode,integration,planning",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T20:56:07.044Z",
+      "updatedAt": "2026-02-02T21:20:52.703Z",
+      "completedAt": "2026-02-02T21:20:52.703Z"
+    },
+    {
+      "id": "635b5379-0b06-4c9a-9637-95728ebea36d",
+      "columnId": "done",
+      "content": "Fix quick-cli.js argument parsing for --priority and --tags --priority medium --tags bug,cli,parsing",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T20:56:37.135Z",
+      "updatedAt": "2026-02-02T22:39:13.688Z",
+      "completedAt": "2026-02-02T22:39:13.688Z"
+    },
+    {
+      "id": "0fff6ca8-6412-48ad-9fb8-5909833fb5fb",
+      "columnId": "done",
+      "content": "enchance the design of Agent Awarness Dashboard",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T21:06:34.212Z",
+      "updatedAt": "2026-02-02T22:40:45.525Z",
+      "completedAt": "2026-02-02T22:40:45.525Z"
+    },
+    {
+      "id": "63ad275c-d99f-436e-8db2-79776c68ccbf",
+      "columnId": "done",
+      "content": "add auto refresh to dashboard. I can't see the change when I move the cards to different column. dashboard should response the momonet I drag and drop.",
+      "description": "",
+      "tags": [
+        "dashboard"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-02T21:49:26.511Z",
+      "updatedAt": "2026-02-02T23:19:36.295Z",
+      "completedAt": "2026-02-02T23:19:36.295Z"
+    },
+    {
+      "id": "b7005737-b56a-447c-934b-45f6089ca48b",
+      "columnId": "done",
+      "content": "Test content --priority high --tags test,fix",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:35:25.824Z",
+      "updatedAt": "2026-02-02T22:47:59.671Z",
+      "completedAt": "2026-02-02T22:47:59.671Z"
+    },
+    {
+      "id": "e9a0d43f-77a2-4e98-ac8c-ada53ad44f36",
+      "columnId": "done",
+      "content": "Test priority parsing --priority high --tags test,fix",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:36:33.068Z",
+      "updatedAt": "2026-02-02T22:47:59.668Z",
+      "completedAt": "2026-02-02T22:47:59.668Z"
+    },
+    {
+      "id": "de742fb3-baa9-41e8-8974-3defea97fe7b",
+      "columnId": "done",
+      "content": "Test priority now --priority high --tags test,fix",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:36:55.953Z",
+      "updatedAt": "2026-02-02T22:47:59.680Z",
+      "completedAt": "2026-02-02T22:47:59.680Z"
+    },
+    {
+      "id": "dd18c0c8-411d-4210-adb2-0b0c9c7c36be",
+      "columnId": "done",
+      "content": "Debug test --priority high --tags test",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:37:53.017Z",
+      "updatedAt": "2026-02-02T22:47:59.691Z",
+      "completedAt": "2026-02-02T22:47:59.691Z"
+    },
+    {
+      "id": "d134c2fe-02b4-48d0-977c-f1350ea9f280",
+      "columnId": "done",
+      "content": "Debug test --priority high --tags test",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:38:00.762Z",
+      "updatedAt": "2026-02-02T22:47:59.701Z",
+      "completedAt": "2026-02-02T22:47:59.701Z"
+    },
+    {
+      "id": "53679b59-7f28-4d72-9db2-7f3881e7aff5",
+      "columnId": "done",
+      "content": "Debug test --priority high --tags test",
+      "description": "",
+      "tags": [],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:38:14.020Z",
+      "updatedAt": "2026-02-02T22:47:59.711Z",
+      "completedAt": "2026-02-02T22:47:59.711Z"
+    },
+    {
+      "id": "acea83f0-4578-4755-86e5-b9f85443bc04",
+      "columnId": "done",
+      "content": "Debug test",
+      "description": "",
+      "tags": [
+        "test"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-02T22:38:38.915Z",
+      "updatedAt": "2026-02-02T22:47:59.720Z",
+      "completedAt": "2026-02-02T22:47:59.720Z"
+    },
+    {
+      "id": "ab029ff7-a532-4a67-aa48-956ce923ee76",
+      "columnId": "done",
+      "content": "Full test",
+      "description": "",
+      "tags": [
+        "cli",
+        "parsing",
+        "fix"
+      ],
+      "priority": "urgent",
+      "createdAt": "2026-02-02T22:38:44.844Z",
+      "updatedAt": "2026-02-02T22:47:59.730Z",
+      "completedAt": "2026-02-02T22:47:59.730Z"
+    },
+    {
+      "id": "a5ef366e-3d9b-4030-b671-39a40e37f4a0",
+      "columnId": "done",
+      "content": "make this dashboard deployable. so that I can access from my phone",
+      "description": "",
+      "tags": [
+        "dashboard"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-02T22:47:48.172Z",
+      "updatedAt": "2026-02-02T23:21:55.429Z",
+      "completedAt": "2026-02-02T23:21:55.429Z"
+    },
+    {
+      "id": "0a764a8d-d912-48c3-bf74-f08556473576",
+      "columnId": "done",
+      "content": "dashboard column height should stick to the view port 80%",
+      "description": "",
+      "tags": [
+        "dashboard"
+      ],
+      "priority": "urgent",
+      "createdAt": "2026-02-02T22:49:16.266Z",
+      "updatedAt": "2026-02-02T22:59:26.917Z",
+      "completedAt": "2026-02-02T22:59:26.917Z"
+    },
+    {
+      "id": "b73730b8-adb2-40b9-ba69-89d2b19b2e6f",
+      "columnId": "done",
+      "content": "develop a pomodoro alarm with opencode cli. IMPORTANT: make opencode work. don't excuess manually in any situation",
+      "description": "",
+      "tags": [
+        "test",
+        "opencode",
+        "cli"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-02T22:52:27.680Z",
+      "updatedAt": "2026-02-02T23:15:24.944Z",
+      "completedAt": "2026-02-02T23:15:24.944Z"
+    },
+    {
+      "id": "a5496117-9866-4702-acb8-e2d358ac1318",
+      "columnId": "done",
+      "content": "make dashboard mobile ready",
+      "description": "",
+      "tags": [
+        "dashboard"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-02T22:54:14.411Z",
+      "updatedAt": "2026-02-02T22:59:39.506Z",
+      "completedAt": "2026-02-02T22:59:39.506Z"
+    },
+    {
+      "id": "117d838e-3f87-4731-b7b5-5ea9768fa9dc",
+      "columnId": "done",
+      "content": "Implement autonomous memory consolidation - review daily logs and update MEMORY.md weekly",
+      "description": "",
+      "tags": [
+        "memory",
+        "automation"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-03T00:11:09.877Z",
+      "updatedAt": "2026-02-03T00:13:34.668Z",
+      "completedAt": "2026-02-03T00:13:34.668Z"
+    },
+    {
+      "id": "fb03a14d-374a-4819-ac90-7a64deb08260",
+      "columnId": "done",
+      "content": "Create self-diagnostic health check - monitor API latency, memory usage, error rates",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "system"
+      ],
+      "priority": "high",
+      "createdAt": "2026-02-03T00:11:09.886Z",
+      "updatedAt": "2026-02-03T00:14:07.445Z",
+      "completedAt": "2026-02-03T00:14:07.445Z"
+    },
+    {
+      "id": "15791e9f-af5d-4b80-9a67-d22a7e83649d",
+      "columnId": "done",
+      "content": "Build skill auto-discovery - scan skills/ folder and auto-register new skills",
+      "description": "",
+      "tags": [
+        "skills",
+        "automation"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-03T00:11:09.891Z",
+      "updatedAt": "2026-02-03T00:19:32.679Z",
+      "completedAt": "2026-02-03T00:19:32.679Z"
+    },
+    {
+      "id": "1889bf20-1012-4641-944f-950062bd24b5",
+      "columnId": "done",
+      "content": "Add task prioritization algorithm - consider urgency, tags, dependencies",
+      "description": "",
+      "tags": [
+        "algorithm",
+        "tasks"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-03T00:11:09.902Z",
+      "updatedAt": "2026-02-03T00:31:04.550Z",
+      "completedAt": "2026-02-03T00:30:24.195Z"
+    },
+    {
+      "id": "1320586b-3055-4be8-8490-5ac02be31c83",
+      "columnId": "ideas",
+      "content": "Implement voice command interface using browser speech recognition",
+      "description": "",
+      "tags": [
+        "voice",
+        "ui"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.912Z",
+      "updatedAt": "2026-02-03T00:11:09.912Z",
+      "completedAt": null
+    },
+    {
+      "id": "b13a29a8-b224-4f12-b467-b198125c0775",
+      "columnId": "ideas",
+      "content": "Create task template system - reusable task patterns for common workflows",
+      "description": "",
+      "tags": [
+        "templates",
+        "tasks"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.922Z",
+      "updatedAt": "2026-02-03T00:11:09.922Z",
+      "completedAt": null
+    },
+    {
+      "id": "8e088442-2805-4100-9295-2eb29b21c158",
+      "columnId": "ideas",
+      "content": "Build analytics dashboard - show completion trends, bottlenecks, productivity metrics",
+      "description": "",
+      "tags": [
+        "analytics",
+        "metrics"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.932Z",
+      "updatedAt": "2026-02-03T00:11:09.932Z",
+      "completedAt": null
+    },
+    {
+      "id": "2b9377f8-9916-449b-9234-fc511f64c3c9",
+      "columnId": "ideas",
+      "content": "Implement gesture recognition for mobile - swipe actions on dashboard",
+      "description": "",
+      "tags": [
+        "mobile",
+        "ui"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.944Z",
+      "updatedAt": "2026-02-03T00:11:09.944Z",
+      "completedAt": null
+    },
+    {
+      "id": "04f0f8a4-2aa9-4f98-a9c2-42bd539d39e3",
+      "columnId": "sleeping",
+      "content": "Learn new coding skill (e.g., Rust, Go, or Dart) based on project needs",
+      "description": "",
+      "tags": [
+        "learning",
+        "skills"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.955Z",
+      "updatedAt": "2026-02-03T00:11:09.955Z",
+      "completedAt": null
+    },
+    {
+      "id": "ff8e604e-75fe-4bf2-bf32-f9ca427bae71",
+      "columnId": "sleeping",
+      "content": "Research and integrate with alternative LLM providers for redundancy",
+      "description": "",
+      "tags": [
+        "llm",
+        "integration"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:11:09.965Z",
+      "updatedAt": "2026-02-03T00:11:09.965Z",
+      "completedAt": null
+    },
+    {
+      "id": "3f708add-b0fc-4c96-bf4c-1738f91784ac",
+      "columnId": "sleeping",
+      "content": "Run memory consolidation script --priority medium --tags memory,automation,cron",
+      "description": "",
+      "tags": [
+        "memory",
+        "automation",
+        "cron"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-03T00:13:01.770Z",
+      "updatedAt": "2026-02-03T00:13:01.770Z",
+      "completedAt": null
+    },
+    {
+      "id": "e3b06524-b835-43a3-b2f5-e4fff0cea8ef",
+      "columnId": "sleeping",
+      "content": "Create cron job for weekly memory consolidation --priority medium --tags cron,automation",
+      "description": "",
+      "tags": [
+        "cron",
+        "automation"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-03T00:13:05.384Z",
+      "updatedAt": "2026-02-03T00:13:05.384Z",
+      "completedAt": null
+    },
+    {
+      "id": "2e33dd9d-e39b-4f16-87f5-b750e432d0b5",
+      "columnId": "sleeping",
+      "content": "Add health check to cron (every 15 min) --priority medium --tags monitoring,cron",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "cron"
+      ],
+      "priority": "medium",
+      "createdAt": "2026-02-03T00:14:04.068Z",
+      "updatedAt": "2026-02-03T00:14:04.068Z",
+      "completedAt": null
+    },
+    {
+      "id": "df8c14e3-48cc-4444-8bcf-a3518ac5e52a",
+      "columnId": "ideas",
+      "content": "Learn Three.js - 3D graphics library for web. Build a 3D dashboard visualization.",
+      "description": "",
+      "tags": [
+        "learning",
+        "threejs",
+        "3d"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:14:39.192Z",
+      "updatedAt": "2026-02-03T00:14:39.192Z",
+      "completedAt": null
+    },
+    {
+      "id": "4b7debf6-1d47-4371-bba6-fb3467fe7db3",
+      "columnId": "ideas",
+      "content": "Learn MySQL - Database design, queries, and optimization for data persistence",
+      "description": "",
+      "tags": [
+        "learning",
+        "mysql",
+        "database"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:16:32.786Z",
+      "updatedAt": "2026-02-03T00:16:32.786Z",
+      "completedAt": null
+    },
+    {
+      "id": "dae786cb-45d7-468f-b68c-6f1f079bc0cf",
+      "columnId": "ideas",
+      "content": "Learn React Native - Build mobile apps with JavaScript and React",
+      "description": "",
+      "tags": [
+        "learning",
+        "react-native",
+        "mobile"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:16:32.795Z",
+      "updatedAt": "2026-02-03T00:16:32.795Z",
+      "completedAt": null
+    },
+    {
+      "id": "7fbbb87c-2e94-4457-a174-5529d34cd62b",
+      "columnId": "ideas",
+      "content": "Learn Go (Golang) - Efficient systems programming language from Google",
+      "description": "",
+      "tags": [
+        "learning",
+        "go",
+        "backend"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:16:32.800Z",
+      "updatedAt": "2026-02-03T00:16:32.800Z",
+      "completedAt": null
+    },
+    {
+      "id": "8f40933e-0326-4b0f-94d4-c33f495242a2",
+      "columnId": "ideas",
+      "content": "Study System Architecture - Learn patterns for scalable, resilient distributed systems",
+      "description": "",
+      "tags": [
+        "learning",
+        "architecture",
+        "systems"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:16:32.812Z",
+      "updatedAt": "2026-02-03T00:16:32.812Z",
+      "completedAt": null
+    },
+    {
+      "id": "d63ccdf5-2007-47c4-bb88-45790f507b34",
+      "columnId": "ideas",
+      "content": "Master Python - Automation, data analysis, and AI/ML applications",
+      "description": "",
+      "tags": [
+        "learning",
+        "python",
+        "automation"
+      ],
+      "priority": "low",
+      "createdAt": "2026-02-03T00:16:32.824Z",
+      "updatedAt": "2026-02-03T00:16:32.824Z",
+      "completedAt": null
+    }
+  ],
+  "metrics": {
+    "tasksCreated": 44,
+    "tasksCompleted": 23,
+    "skillsLearned": 4,
+    "memoriesStored": 0,
+    "correctionsMade": 0,
+    "sessionCount": 0,
+    "lastActive": "2026-02-03T00:31:04.550Z"
+  },
+  "skills": [
+    {
+      "id": "3a208d64-b252-4025-bcc7-0211acdb4a6d",
+      "name": "OpenClaw CLI",
+      "description": "Gateway, channels, nodes, memory commands",
+      "acquiredAt": "2026-02-02T19:16:51.089Z"
+    },
+    {
+      "id": "129473b1-99f4-4caa-88db-db91a25994dd",
+      "name": "Agent Awareness System",
+      "description": "Kanban board with CLI and HTML dashboard",
+      "acquiredAt": "2026-02-02T19:17:05.301Z"
+    },
+    {
+      "id": "f7b55317-ed0d-4907-ba0c-270156911298",
+      "name": "Lobster Workflows",
+      "description": "Deterministic pipelines with approval checkpoints",
+      "acquiredAt": "2026-02-02T19:17:05.771Z"
+    },
+    {
+      "id": "9f1545c3-3bfe-4c02-940c-0a20095d9e99",
+      "name": "Sub-Agents",
+      "description": "Background parallel agent execution",
+      "acquiredAt": "2026-02-02T19:17:06.199Z"
+    }
+  ],
+  "memories": [],
+  "sessions": [],
+  "updatedAt": "2026-02-03T00:31:04.550Z"
+}

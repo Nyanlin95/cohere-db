@@ -1,0 +1,203 @@
+{
+  "lastDiscovery": "2026-02-03T00:18:55.395Z",
+  "skills": {
+    "accessible-ui": {
+      "name": "accessible-ui",
+      "path": "accessible-ui",
+      "description": "Build accessible, inclusive interfaces. Use when creating UI components, forms, modals, navigation, or any interactive element. Focus on keyboard navigation, screen reader support, ARIA patterns, and WCAG compliance.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.397Z"
+    },
+    "agent-architect": {
+      "name": "agent-architect",
+      "path": "agent-architect",
+      "description": "Design patterns for autonomous agents. Covers tool integration, permission systems, subagent coordination, and human-in-the-loop workflows. Use when building multi-agent systems, designing tool APIs, or creating autonomous assistants.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.397Z"
+    },
+    "agent-awareness": {
+      "name": "agent-awareness",
+      "path": "agent-awareness",
+      "description": "Self-awareness and state tracking for AI agents. Track tasks, goals, skills, memories, and metrics in a Kanban-style dashboard.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.398Z"
+    },
+    "autonomous-worker": {
+      "name": "autonomous-worker",
+      "path": "autonomous-worker",
+      "description": "Run as autonomous worker for self-improvement and internal tasks. Use for memory maintenance, skill development, and infrastructure improvements without human input.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.399Z"
+    },
+    "bird": {
+      "name": "bird",
+      "path": "bird",
+      "description": "X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.399Z"
+    },
+    "clawdbot-self-security-audit": {
+      "name": "clawdbot-self-security-audit",
+      "path": "clawdbot-security-check",
+      "description": "Perform a comprehensive read-only security audit of Clawdbot's own configuration. This is a knowledge-based skill that teaches Clawdbot to identify hardening opportunities across the system. Use when user asks to \"run security check\", \"audit clawdbot\", \"check security hardening\", or \"what vulnerabilities does my Clawdbot have\". This skill uses Clawdbot's internal capabilities and file system access to inspect configuration, detect misconfigurations, and recommend remediations. It is designed to be extensible - new checks can be added by updating this skill's knowledge.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.400Z"
+    },
+    "coding-agent": {
+      "name": "coding-agent",
+      "path": "coding-agent",
+      "description": "Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent via background process for programmatic control.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.400Z"
+    },
+    "context-optimizer": {
+      "name": "context-optimizer",
+      "path": "context-optimizer",
+      "description": "Strategies for managing LLM context windows including summarization, trimming, routing, and avoiding context rot. Use when context is limited, conversations get long, or token usage needs optimization.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.400Z"
+    },
+    "design-review": {
+      "name": "design-review",
+      "path": "design-review",
+      "description": "Review UI code against web interface guidelines and best practices. Use when asked to review UI, check accessibility, audit design, or verify compliance with standards.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.401Z"
+    },
+    "frontend-polish": {
+      "name": "frontend-polish",
+      "path": "frontend-polish",
+      "description": "Refine and elevate frontend interfaces with production-grade aesthetics. Use when improving existing UI, adding visual polish, or creating distinctive web components. Focus on typography, color, motion, and spatial composition.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.401Z"
+    },
+    "gno": {
+      "name": "gno",
+      "path": "gno",
+      "description": "Search local documents, files, notes, and knowledge bases. Index directories, search with BM25/vector/hybrid, get AI answers with citations. Use when user wants to search files, find documents, query notes, look up information in local folders, index a directory, set up document search, build a knowledge base, needs RAG/semantic search, or wants to start a local web UI for their docs.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.401Z"
+    },
+    "infinite-loop": {
+      "name": "infinite-loop",
+      "path": "infinite-loop",
+      "description": "Autonomous work cycle that continues until interrupted. Works on dashboard tasks, generates ideas, and maintains self-improvement without human input.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.402Z"
+    },
+    "memory-master": {
+      "name": "memory-master",
+      "path": "memory-master",
+      "description": "Enhanced memory architecture for AI assistants. Implement tiered memory (short-term, long-term, semantic, episodic) with intelligent retrieval. Use when designing memory systems, improving recall, or building persistent assistants.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.402Z"
+    },
+    "notion": {
+      "name": "notion",
+      "path": "notion",
+      "description": "Notion API for creating and managing pages, databases, and blocks.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.402Z"
+    },
+    "self-monitor": {
+      "name": "self-monitor",
+      "path": "self-monitor",
+      "description": "Track personal performance, errors, and self-audit. Use after tool failures, after complex tasks, or during heartbeats to reflect on mistakes and improvements.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.403Z"
+    },
+    "session-continuity": {
+      "name": "session-continuity",
+      "path": "session-continuity",
+      "description": "Persistent memory across conversations. Implement entity tracking, preference memory, and session bridging. Use when users expect the assistant to remember past interactions, preferences, or ongoing work.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.403Z"
+    },
+    "socketio-debug": {
+      "name": "socketio-debug",
+      "path": "socketio-debug",
+      "description": "Debug Socket.IO connection issues in KaSar. Handle room broadcasting failures, duplicate listeners, and cached connection problems.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.403Z"
+    },
+    "subagent-driven-development": {
+      "name": "subagent-driven-development",
+      "path": "subagent-driven-development",
+      "description": "Execute implementation plans with independent tasks using fresh subagents per task. Dispatch implementer, then two-stage review (spec compliance first, then code quality). Use when plan exists, tasks are independent, and staying in same session.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.403Z"
+    },
+    "tailwind-master": {
+      "name": "tailwind-master",
+      "path": "tailwind-master",
+      "description": "Master Tailwind CSS v4 patterns. CSS-first configuration, container queries, modern layouts, OKLCH colors, and design token architecture. Use when building or styling with Tailwind.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.404Z"
+    },
+    "user-centered-design": {
+      "name": "user-centered-design",
+      "path": "user-centered-design",
+      "description": "User-centered design toolkit. Use when designing features, creating user flows, validating decisions, or improving UX. Includes personas, journey mapping, usability heuristics, and design principles.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.404Z"
+    },
+    "verify-on-browser": {
+      "name": "verify-on-browser",
+      "path": "verify-on-browser",
+      "description": "Control browser via Chrome DevTools Protocol - full CDP access. Use for UI automation, web scraping, form testing, and deterministic browser interactions.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.404Z"
+    },
+    "web-perf": {
+      "name": "web-perf",
+      "path": "web-perf",
+      "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (FCP, LCP, TBT, CLS, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed.",
+      "emoji": "📦",
+      "tags": [],
+      "requires": {},
+      "discoveredAt": "2026-02-03T00:18:55.405Z"
+    }
+  }
+}
