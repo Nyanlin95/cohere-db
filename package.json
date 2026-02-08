@@ -1,6 +1,6 @@
 {
   "name": "cohere",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "AI-powered database schema extraction and documentation generator for Claude, Cursor, and other AI coding assistants",
   "main": "dist/cli.js",
   "type": "module",
