@@ -344,7 +344,7 @@ function generateStateMarkdown(sessionId: string, agentId: string, timestamp: st
 
 function generateContextJson(sessionId: string, agentId: string, timestamp: string, status: string): string {
   return JSON.stringify({
-    version: "1.0.0",
+    version: "1.0.1",
     session: {
       id: sessionId,
       agentId: agentId,
