@@ -1,4 +1,4 @@
-# Contributing to db-ai-context
+# Contributing to cohere-db
 
 Thank you for your interest in contributing! This document provides guidelines and instructions.
 

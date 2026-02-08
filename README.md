@@ -1,144 +1,150 @@
-# Cohere-db
+# cohere-db
 
-> AI-powered database schema extraction and documentation generator for Claude, Cursor, and other AI coding assistants
+> AI-optimized database schema extraction for Claude, Cursor, and other AI coding assistants
 
 [![npm version](https://img.shields.io/npm/v/cohere-db.svg)](https://www.npmjs.com/package/cohere-db)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## The Problem
+## Why?
 
-AI coding assistants struggle with databases because they lack context about:
-- **Schema structure** - Tables, columns, types, and constraints
-- **Relationships** - Foreign keys, joins, and cardinalities
-- **Data types** - Proper mapping between SQL and your ORM
-- **Valid queries** - Common patterns and edge cases
+AI assistants struggle with databases because they don't know your schema. This leads to wrong table names, missing relationships, and broken queries.
 
-This leads to:
-- ❌ Incorrect SQL generation (wrong table/column names)
-- ❌ Missing relationships (N+1 query problems)
-- ❌ Type mismatches and runtime errors
-- ❌ Context drift in long conversations
+**cohere-db** fixes this by extracting your database schema and generating AI-optimized context files that give assistants perfect knowledge of your database structure.
 
-## The Solution
-
-`cohere` extracts database schema information and generates AI-optimized context files:
-- `CLAUDE.md` - Structured context for Claude Code
-- `AGENTS.md` - Context for Cursor/Windsurf
-- `DATABASE.md` - Human-readable schema documentation
-- Type definitions and query templates
-
-## Features
-
-### 🎯 Core Commands
-
-```bash
-# Initialize in your project
-cohere init
-
-# Generate context from your database
-cohere generate --url "postgresql://user:pass@localhost:5432/mydb"
-
-# Generate from ORM schema files
-cohere generate --prisma
-cohere generate --drizzle
-
-# Watch for schema changes and auto-regenerate
-cohere watch
-
-# Validate generated context matches database
-cohere validate
-
-# Show current database state
-cohere show
-```
-
-### 🗄️ Supported Databases
-
-| Database | Status | Notes |
-|----------|--------|-------|
-| PostgreSQL | ✅ | Full support with indexes, FKs, constraints |
-| MySQL | ✅ | Full support with InnoDB features |
-| SQLite | ✅ | Full support with PRAGMA introspection |
-| MongoDB | ✅ | Document sampling and type inference |
-| Firebase Firestore | ✅ | Collection sampling with field detection |
-
-### 🛠️ Supported ORMs & Schema Tools
-
-| Tool | Status | Notes |
-|------|--------|-------|
-| Prisma | ✅ | Parse `schema.prisma` files |
-| Drizzle ORM | ✅ | Parse schema files |
-| Kysely | 🔄 | Planned |
-| TypeORM | 🔄 | Planned |
-
-## Installation
-
-```bash
-npm install -g cohere-db
-```
-
-Or use with npx:
-```bash
-npx cohere-db generate --url "postgresql://..."
-```
-
-## Quick Start
-
-### 1. Initialize
-```bash
-cd my-project
-cohere init
-```
-
-### 2. Generate Context
-
-**From a Live Database:**
-```bash
-cohere generate --url "postgresql://localhost:5432/mydb"
-```
-
-**From Prisma Schema:**
-```bash
-cohere generate --prisma
-```
-
-**From Drizzle Schema:**
-```bash
-cohere generate --drizzle src/db/schema.ts
-```
-
-### 3. Generated Files
-
-After running `generate`, you'll have:
+## What You Get
 
 ```
 .ai/
 ├── CLAUDE.md       # Claude-optimized context
-├── AGENTS.md       # Cursor/Windsurf context
+├── AGENTS.md       # Cursor/Windsurf context  
 ├── DATABASE.md     # Human-readable docs
 └── queries/        # Example query templates
 ```
 
-### 4. Use with AI Tools
+## Quick Start
 
-**Claude Code:**
-- Claude automatically reads `.ai/CLAUDE.md` in your project root
+```bash
+# Install globally
+npm install -g cohere-db
 
-**Cursor/Windsurf:**
-- Add `.ai/AGENTS.md` to your `.cursorrules` or `.windsurfrules`
+# Or use with npx
+npx cohere-db init
 
-**Gemini CLI:**
-- Reference `.ai/DATABASE.md` in your context
+# Generate from your database
+cohere-db generate --url "postgresql://localhost:5432/mydb"
 
-## Example Output
+# Or from your ORM
+cohere-db generate --prisma
+cohere-db generate --drizzle
+```
+
+That's it! Your AI assistant now has complete schema knowledge.
+
+## Commands
+
+```bash
+cohere-db init                    # Initialize in your project
+cohere-db generate               # Generate context files
+cohere-db watch                  # Auto-regenerate on changes
+cohere-db validate              # Verify docs match database
+cohere-db show                  # Display current schema
+```
+
+## Supported Databases
+
+| Database | Support |
+|----------|---------|
+| PostgreSQL | ✅ |
+| MySQL | ✅ |
+| SQLite | ✅ |
+| MongoDB | ✅ |
+| Firebase Firestore | ✅ |
+
+## Supported ORMs
+
+| ORM | Support |
+|-----|---------|
+| Prisma | ✅ |
+| Drizzle | ✅ |
+| Kysely | 🔄 Soon |
+| TypeORM | 🔄 Soon |
+
+## Examples
+
+### From a Database
+
+```bash
+# PostgreSQL
+cohere-db generate --url "postgresql://user:pass@localhost:5432/mydb"
+
+# MySQL
+cohere-db generate --url "mysql://user:pass@localhost:3306/mydb"
+
+# SQLite
+cohere-db generate --url "sqlite://./database.db"
+
+# MongoDB (with sampling)
+cohere-db generate --url "mongodb://localhost:27017/mydb" --sample-size 1000
+```
+
+### From an ORM
+
+```bash
+# Prisma (auto-detects schema.prisma)
+cohere-db generate --prisma
+
+# Drizzle (specify schema file)
+cohere-db generate --drizzle src/db/schema.ts
+```
+
+### Firebase/Firestore
+
+```bash
+# Set credentials
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account.json"
+cohere-db generate --firebase my-project-id
+
+# Or provide directly
+cohere-db generate --firebase my-project-id --firebase-key service-account.json
+```
+
+### Watch Mode
+
+Auto-regenerate when your schema changes:
+
+```bash
+cohere-db watch
+```
+
+Monitors:
+- Database migrations
+- Prisma schema files
+- Drizzle schema files
+
+### Validation
+
+Ensure docs match your database:
+
+```bash
+cohere-db validate --url "postgresql://..."
+```
+
+Checks:
+- All tables documented
+- Column types match
+- Indexes present
+- Foreign keys valid
+
+## Generated Output
+
+Here's what your AI assistant sees:
 
 ```markdown
-<!-- CLAUDE.md excerpt -->
 ## Database Schema
 
 ### users
 **Type:** table  
-**Engine:** InnoDB (MySQL)
+**Engine:** InnoDB
 
 #### Columns
 - `id` - int, PRIMARY KEY, AUTO_INCREMENT
@@ -170,186 +176,86 @@ WHERE u.id = ?
 \`\`\`
 ```
 
-## Advanced Usage
-
-### Watch Mode
-
-Automatically regenerate when schema changes:
-```bash
-cohere watch
-```
-
-This monitors:
-- Prisma schema files
-- Database migrations
-- Drizzle schema files
-
-### MongoDB Sampling
-
-For NoSQL databases, Cohere samples documents to infer schema:
-
-```bash
-cohere generate --url "mongodb://localhost:27017/mydb" --sample-size 1000
-```
-
-### Firebase/Firestore
-
-Requires service account credentials:
-
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account.json"
-cohere generate --firebase my-project-id
-```
-
-Or provide the key directly:
-```bash
-cohere generate --firebase my-project-id --firebase-key service-account.json
-```
-
-### Validation
-
-Ensure your generated docs match the actual database:
-
-```bash
-cohere validate --url "postgresql://..."
-```
-
-This checks:
-- ✅ All tables documented
-- ✅ Column types match
-- ✅ Indexes present
-- ✅ Foreign keys valid
-
 ## Configuration
 
-Create `.cohererc.json` in your project root:
+Create `.cohererc.json`:
 
 ```json
 {
   "outputDir": ".ai",
   "databases": {
     "development": "postgresql://localhost:5432/dev",
-    "production": "postgresql://prod-server:5432/prod"
+    "production": "postgresql://prod:5432/prod"
   },
   "include": ["users", "posts", "comments"],
   "exclude": ["migrations", "sessions"],
   "watch": {
     "enabled": true,
     "paths": ["prisma/schema.prisma", "src/db/**/*.ts"]
-  },
-  "templates": {
-    "claude": "custom/claude-template.md"
   }
 }
 ```
 
-## CLI Reference
+## CLI Options
 
-### `cohere init`
-Initialize Cohere in your project
+### `cohere-db generate`
 
-**Options:**
-- `-u, --url <url>` - Database connection URL
-- `-d, --dir <dir>` - Output directory (default: `.ai`)
+| Option | Description |
+|--------|-------------|
+| `-u, --url <url>` | Database connection URL |
+| `--prisma [path]` | Use Prisma schema |
+| `--drizzle [path]` | Use Drizzle schema |
+| `--firebase <id>` | Firestore project ID |
+| `--firebase-key <path>` | Service account key |
+| `--mongo-sample <n>` | MongoDB sample size (default: 100) |
+| `-o, --output <dir>` | Output directory |
 
-### `cohere generate`
-Generate context files from database or ORM
+### `cohere-db watch`
 
-**Options:**
-- `-u, --url <url>` - Database connection URL
-- `--prisma [path]` - Use Prisma schema
-- `--drizzle [path]` - Use Drizzle schema  
-- `--firebase <projectId>` - Firestore project ID
-- `--firebase-key <path>` - Service account key path
-- `--mongo-sample <n>` - MongoDB sample size (default: 100)
-- `-o, --output <dir>` - Output directory
+| Option | Description |
+|--------|-------------|
+| `-u, --url <url>` | Database connection URL |
+| `--interval <ms>` | Check interval (default: 5000) |
 
-### `cohere watch`
-Watch for schema changes and auto-regenerate
+### `cohere-db validate`
 
-**Options:**
-- `-u, --url <url>` - Database connection URL
-- `--interval <ms>` - Check interval (default: 5000)
+| Option | Description |
+|--------|-------------|
+| `-u, --url <url>` | Database connection URL |
 
-### `cohere validate`
-Validate generated docs against database
+### `cohere-db show`
 
-**Options:**
-- `-u, --url <url>` - Database connection URL
+| Option | Description |
+|--------|-------------|
+| `-u, --url <url>` | Database connection URL |
+| `--json` | Output as JSON |
 
-### `cohere show`
-Display current database state
+## Using with AI Tools
 
-**Options:**
-- `-u, --url <url>` - Database connection URL
-- `--json` - Output as JSON
+### Claude Code
+Claude automatically reads `.ai/CLAUDE.md` from your project root. Just generate and start coding!
 
-## Architecture
+### Cursor/Windsurf
+Add `.ai/AGENTS.md` to your `.cursorrules` or `.windsurfrules`:
 
 ```
-cohere/
-├── src/
-│   ├── cli.ts              # CLI entry point
-│   ├── commands/           # Command implementations
-│   │   ├── generate.ts     # Schema extraction & generation
-│   │   ├── init.ts         # Project initialization
-│   │   ├── validate.ts     # Schema validation
-│   │   ├── watch.ts        # File watching
-│   │   └── show.ts         # Display schema
-│   ├── extractors/         # Database-specific extractors
-│   │   ├── postgres.ts     # PostgreSQL extractor
-│   │   ├── mysql.ts        # MySQL extractor
-│   │   ├── sqlite.ts       # SQLite extractor
-│   │   ├── mongodb.ts      # MongoDB extractor
-│   │   ├── firebase.ts     # Firestore extractor
-│   │   ├── prisma.ts       # Prisma schema parser
-│   │   └── drizzle.ts      # Drizzle schema parser
-│   ├── generators/         # Context file generators
-│   │   ├── claude.ts       # CLAUDE.md generator
-│   │   ├── cursor.ts       # AGENTS.md generator
-│   │   └── markdown.ts     # DATABASE.md generator
-│   └── utils/              # Shared utilities
-└── templates/              # Output templates
-    ├── claude.md
-    ├── cursor.md
-    └── queries/
+@.ai/AGENTS.md
 ```
 
-## Testing
+### Gemini CLI
+Reference the context in your prompts:
 
-Cohere includes comprehensive unit tests for all extractors:
-
-```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Watch mode
-npm run test:watch
+```
+Read .ai/DATABASE.md for schema information
 ```
 
-Test coverage:
-- ✅ PostgreSQL extractor (tables, indexes, foreign keys)
-- ✅ MySQL extractor (InnoDB features)
-- ✅ SQLite extractor (PRAGMA queries)
-- ✅ MongoDB extractor (document sampling)
-- ✅ Firebase extractor (collection inference)
-- ✅ Prisma parser (schema.prisma files)
-- ✅ Drizzle parser (schema definitions)
+## Privacy & Security
+
+**100% local.** All extraction happens on your machine. Your database credentials and schema never leave your computer.
 
 ## Contributing
 
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for your changes
-4. Ensure all tests pass (`npm test`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+Contributions welcome! See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
 ## Roadmap
 
@@ -357,27 +263,28 @@ See [ROADMAP.md](docs/ROADMAP.md) for planned features.
 
 ## FAQ
 
-**Q: Does Cohere send data to external services?**  
-A: No. All schema extraction happens locally. Your database credentials and schema never leave your machine.
+**Q: Does this send my data anywhere?**  
+A: No. Everything runs locally.
 
-**Q: Can I use this with private/commercial databases?**  
-A: Yes. Cohere is MIT licensed and can be used commercially.
+**Q: Can I use this commercially?**  
+A: Yes. MIT licensed.
 
-**Q: How often should I regenerate context?**  
-A: Use `cohere watch` during development. Regenerate after schema migrations in production.
+**Q: How often should I regenerate?**  
+A: Use `cohere-db watch` during development. Regenerate after migrations in production.
 
-**Q: Does this work with multi-tenant databases?**  
-A: Yes. Cohere extracts the schema structure. Tenant-specific data is not included.
+**Q: Does it work with multi-tenant databases?**  
+A: Yes. It extracts schema structure only, not tenant data.
 
-**Q: Can I customize the output templates?**  
-A: Yes. Create custom templates in `.cohererc.json` or the `templates/` directory.
+**Q: Can I customize templates?**  
+A: Yes. Via `.cohererc.json` or the `templates/` directory.
 
 ## License
 
-MIT © Cohere Team
+MIT © Nyan Lin Maung
 
 ## Acknowledgments
 
-- [Prisma](https://prisma.io) - Inspiration for type-safe database access
+Inspired by:
+- [Prisma](https://prisma.io) - Type-safe database access
 - [Drizzle ORM](https://orm.drizzle.team) - Lightweight ORM patterns
-- [Supabase CLI](https://supabase.com/docs/reference/cli) - CLI design patterns
+- [Supabase CLI](https://supabase.com/docs/reference/cli) - CLI design

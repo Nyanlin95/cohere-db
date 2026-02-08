@@ -1,4 +1,4 @@
-# Feature Roadmap: db-ai-context
+# Feature Roadmap: cohere-db
 
 ## Version History
 
@@ -22,7 +22,7 @@
 - [ ] Generate `CLAUDE.md` with table list, columns, types
 - [ ] Generate `AGENTS.md` for Cursor/Windsurf
 - [ ] Basic CLI with `init`, `generate` commands
-- [ ] Config file support (`db-ai.config.json`)
+- [ ] Config file support (`.cohererc.json`)
 - [ ] Handle common types (text, uuid, timestamp, boolean, json)
 - [ ] Primary key detection
 - [ ] Foreign key relationship detection
@@ -47,7 +47,7 @@
 
 ### Success Criteria
 
-- [ ] Can run `db-ai init --url "postgresql://..."` successfully
+- [ ] Can run `cohere-db init --url "postgresql://..."` successfully
 - [ ] Generates `CLAUDE.md` with correct schema
 - [ ] Claude Code can use generated context
 - [ ] Cursor can use generated context
@@ -88,8 +88,8 @@
 
 ### Success Criteria
 
-- [ ] Can run `db-ai generate --orm prisma` successfully
-- [ ] Can run `db-ai generate --orm drizzle` successfully
+- [ ] Can run `cohere-db generate --prisma` successfully
+- [ ] Can run `cohere-db generate --drizzle` successfully
 - [ ] Generated context includes ORM-specific patterns
 - [ ] Query examples match codebase patterns
 

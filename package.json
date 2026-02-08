@@ -5,7 +5,7 @@
   "main": "dist/cli.js",
   "type": "module",
   "bin": {
-    "cohere": "./dist/cli.js"
+    "cohere-db": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsc",

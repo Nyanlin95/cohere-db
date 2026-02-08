@@ -67,3 +67,6 @@ service-account*.json
 
 # Debug output
 debug_output.txt
+
+# Documentation
+docs/ROADMAP.md
