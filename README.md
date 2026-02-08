@@ -2,7 +2,7 @@
 
 > AI-powered database schema extraction and documentation generator for Claude, Cursor, and other AI coding assistants
 
-[![npm version](https://img.shields.io/npm/v/cohere.svg)](https://www.npmjs.com/package/cohere)
+[![npm version](https://img.shields.io/npm/v/cohere-db.svg)](https://www.npmjs.com/package/cohere-db)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## The Problem
@@ -74,12 +74,12 @@ cohere show
 ## Installation
 
 ```bash
-npm install -g cohere
+npm install -g cohere-db
 ```
 
 Or use with npx:
 ```bash
-npx cohere generate --url "postgresql://..."
+npx cohere-db generate --url "postgresql://..."
 ```
 
 ## Quick Start
