@@ -1,4 +1,4 @@
-# Cohere
+# Cohere-db
 
 > AI-powered database schema extraction and documentation generator for Claude, Cursor, and other AI coding assistants
 
