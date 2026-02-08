@@ -99,13 +99,13 @@
 
 ```bash
 # Resume from current state
-db-ai handoff --resume {sessionId}
+cohere-db handoff --resume {sessionId}
 
 # Record progress
-db-ai handoff --record
+cohere-db handoff --record
 
 # List available sessions
-db-ai handoff --list
+cohere-db handoff --list
 ```
 
 ---

@@ -22,7 +22,7 @@ export async function validate(options: ValidateOptions): Promise<void> {
   console.log(`   Strict mode: ${options.strict ? 'enabled' : 'disabled'}\n`);
 
   const aiDir = '.ai';
-  const configPath = path.join(aiDir, 'db-ai-config.json');
+  const configPath = path.join(aiDir, 'cohere-config.json');
 
   // Check if context exists
   if (!fs.existsSync(configPath)) {

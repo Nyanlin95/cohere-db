@@ -29,13 +29,13 @@ export async function init(options: InitOptions): Promise<void> {
   };
 
   fs.writeFileSync(
-    path.join(fullPath, 'db-ai-config.json'),
+    path.join(fullPath, 'cohere-config.json'),
     JSON.stringify(config, null, 2)
   );
 
   console.log(`✅ Initialized!`);
-  console.log(`\n📄 Created: ${path.join(fullPath, 'db-ai-config.json')}`);
+  console.log(`\n📄 Created: ${path.join(fullPath, 'cohere-config.json')}`);
   console.log(`\n💡 Next steps:`);
-  console.log(`   1. Run 'db-ai generate' to create context files`);
-  console.log(`   2. Or 'db-ai generate --url "postgresql://..." if URL not set`);
+  console.log(`   1. Run 'cohere-db generate' to create context files`);
+  console.log(`   2. Or 'cohere-db generate --url "postgresql://..." if URL not set`);
 }

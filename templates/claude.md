@@ -145,13 +145,13 @@ See [`.ai/queries/`](.ai/queries/) for:
 
 ```bash
 # Universal validation
-db-ai validate --schema
+cohere-db validate --schema
 
 # Claude-specific
 claude db:check
 
 # Codex-specific
-codex exec "db-ai validate --schema"
+codex exec "cohere-db validate --schema"
 ```
 
 ---

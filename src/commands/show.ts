@@ -37,7 +37,7 @@ export async function show(options: ShowOptions): Promise<void> {
     }
 
     // If no existing context, try to generate from config
-    const configPath = path.join(aiDir, 'db-ai-config.json');
+    const configPath = path.join(aiDir, 'cohere-config.json');
     if (!fs.existsSync(configPath)) {
         console.log('⚠️  No schema found.');
         console.log('\nRun one of the following:');

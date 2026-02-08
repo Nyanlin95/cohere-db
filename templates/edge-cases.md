@@ -160,5 +160,5 @@ claude mem list
 codex context --stats
 
 # Universal: Schema validation
-db-ai validate --schema
+cohere-db validate --schema
 ```

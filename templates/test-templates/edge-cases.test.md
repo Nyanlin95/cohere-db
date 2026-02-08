@@ -227,4 +227,4 @@ codex exec "npm test -- --testPathPattern=test-templates"
 ```
 
 ---
-*Template version: 1.0.1*
+*Template version: 1.0.2*

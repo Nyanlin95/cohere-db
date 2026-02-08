@@ -221,4 +221,4 @@ ${learning.sqlExample}
 ```
 
 ---
-*Pattern version: 1.0.1*
+*Pattern version: 1.0.2*
